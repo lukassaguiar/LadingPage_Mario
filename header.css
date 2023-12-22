@@ -1,0 +1,68 @@
+header {
+    display: flex;
+    align-items: center;
+    column-gap: 64px;
+    width: 100%;
+    max-width: 1440px;
+    padding-top: 24px;
+}
+
+header img{
+    width: 70px;
+    height: auto;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    column-gap: 48px; /* PESQUISAR */
+}
+.nav_link {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px; /* PESQUISAR */
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav_link:hover {
+color: var(--red);
+}
+
+.nav_link::after {
+    content: '';
+    position: absolute  ;
+    left: 0;
+    bottom: -2px;
+    width: 60%;
+    height: 1px;
+    background: var(--red);
+    transform: scaleX(0);/* TRAS O EFEITO EMBAIXO DOS LINKS */
+    transform-origin: left; /* TRAS O EFEITO EMBAIXO DOS LINKS */
+    transition: 0.4s; /* TRAS O EFEITO EMBAIXO DOS LINKS */
+}
+
+.nav_link:hover::after{
+    transform: scaleX(1);   /* TRAS O EFEITO EMBAIXO DOS LINKS */
+    transform-origin: right; /* TRAS O EFEITO EMBAIXO DOS LINKS */
+        
+}
+
+.nav_social {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.nav_social svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    transition: all 0.4s;
+}
+
+.nav_social svg:hover{
+    opacity: 1;
+    transform: translateY(-5px); /* SOBE OS ICONES PRA CIMA */
+    cursor: pointer;
+}
